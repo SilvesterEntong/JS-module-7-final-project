@@ -7,7 +7,7 @@ const cakeRecipes = require("./cake-recipes.json");
 // funtion to get all authors
 const getAllAuthors = (recipes) => {
   const authors = [];
-  cakeRecipes.forEach((recipe) => {
+  recipes.forEach((recipe) => {
     if (!authors.includes(recipe.author)) {
       authors.push(recipe.author);
     }
