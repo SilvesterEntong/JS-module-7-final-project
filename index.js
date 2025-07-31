@@ -4,11 +4,8 @@ const cakeRecipes = require("./cake-recipes.json");
 
 // Your functions here
 
-console.log("Welcome to the Cake Recipe Management System!");
-console.log("===========================================");
-
 // funtion to get all authors
-const getAllAuthors = () => {
+const getAllAuthors = (recipes) => {
   const authors = [];
   cakeRecipes.forEach((recipe) => {
     if (!authors.includes(recipe.author)) {
@@ -21,7 +18,7 @@ console.log(getAllAuthors(cakeRecipes));
 
 // function to get recipe names
 const getRecipeNames = (cakeRecipes) => {
-  if (recipeNames.length === 0) {
+  if (cakeRecipes.length === 0) {
     return "No recipes found.";
   }
   cakeRecipes.forEach(({ title }) => {
